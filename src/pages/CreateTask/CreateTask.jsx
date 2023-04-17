@@ -2,14 +2,20 @@ import React from "react";
 import styles from "./createTask.module.scss";
 import { useForm } from "react-hook-form";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { getTodayDate } from "../../utils/getDate";
 
 import axios from "axios";
 
 const CreateTask = () => {
   const navigate = useNavigate();
+  const [date, setDate] = React.useState("");
+  console.log(date);
   console.log("CreateTask перерисовался");
 
-  //   const [dataInput, setDataInput] = React.useState({});
+  React.useEffect(() => {
+    const todayIs = getTodayDate();
+    setDate(todayIs);
+  }, []);
 
   const {
     register,
@@ -25,6 +31,7 @@ const CreateTask = () => {
       const taskObj = {
         text: data.taskText,
         title: data.tasktitle,
+        date,
       };
       // setDataInput(data);
       axios.post("http://localhost:7777/add-task", taskObj);
