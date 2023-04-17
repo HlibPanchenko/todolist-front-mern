@@ -1,0 +1,28 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.block {
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #000;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding-inline-start:0px
+}
+
+.listitem {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
