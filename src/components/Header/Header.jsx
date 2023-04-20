@@ -16,7 +16,7 @@ const Header = () => {
                 <Link to="/createTask">Создать новую задачу</Link>
               </li>
               <li className={styles.listitem}>
-                <Link to="#">Главная</Link>
+                <Link to="/calendar">Календарь активности</Link>
               </li>
               <li className={styles.listitem}>
                 <Link to="#">Главная</Link>

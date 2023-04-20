@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.block {
+  padding: 50px;
+  margin: 10px;
+  border: 1px solid #000;
+  min-height: 78vh;
+  max-width: 100%;
+}
+
+.flexBox {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // align-items: center;
+  min-width: 100%;
+  gap: 20px;
+  min-height: 100%;
+
+  @media (max-width: 990px) {
+  justify-content: center;
+
+  }
+}
+
+.calendarEvents {
+flex: 1 0 40%;
+gap: 10px;
+border: 1px solid green;
+min-height: 100%;
+padding: 10px;
+}
